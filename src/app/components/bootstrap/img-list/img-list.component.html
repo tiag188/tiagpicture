@@ -1,0 +1,8 @@
+<div class="container">
+    <app-search (onTyping)="filter = $event" [value]="filter">
+    </app-search>
+    <app-imgs [imgs]="imgs | fitlerByDescription: filter"></app-imgs>
+
+    <app-load-button (click)="load()" [hasMore]="hasMore">
+    </app-load-button>
+</div>
